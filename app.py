@@ -32,4 +32,4 @@ if model_button:
     clean_data = car_data.dropna(subset=['model_year', 'price'])
     fig = px.scatter(car_data, x="model_year", y="price")
     # crear gráfico de dispersión
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
