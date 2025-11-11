@@ -27,6 +27,9 @@ if model_button:
     st.write('Valores nulos en model_year: ',
              car_data['model_year'].isnull().sum())
     st.write('Valores nulos en price: ', car_data['price'].isnull().sum())
+
+    # Corregir valores nulos que puedan estar afectando imprimir la gráfica 2 en Render
+    clean_data = car_data.dropna(subset=['model_year', 'price'])
     fig = px.scatter(car_data, x="model_year", y="price")
     # crear gráfico de dispersión
     st.plotly_chart(fig, use_container_width=True)
