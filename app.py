@@ -30,6 +30,6 @@ if model_button:
 
     # Corregir valores nulos que puedan estar afectando imprimir la gráfica 2 en Render
     clean_data = car_data.dropna(subset=['model_year', 'price'])
-    fig = px.scatter(car_data, x="model_year", y="price")
+    fig = px.scatter(clean_data, x="model_year", y="price")
     # crear gráfico de dispersión
     st.plotly_chart(fig, width='stretch')
