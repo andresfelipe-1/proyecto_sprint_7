@@ -4,7 +4,7 @@ import plotly.express as px
 
 st.header('Análisis de data de carros')
 
-car_data = pd.read_csv('notebooks/vehicles_us.csv', sep=';')  # leer los datos@
+car_data = pd.read_csv('notebooks/vehicles_us.csv', sep=';')  # leer los datos
 hist_button = st.button('Construir histograma')  # crear un botón
 model_button = st.button('Construir gráfico de dispersión')
 
@@ -21,7 +21,7 @@ if hist_button:  # al hacer clic en el botón
 
 if model_button:
     st.write(
-        'Creacion de una grafica de dispersion que grafique el ano del modelo vs el precio')
+        'Creacion de una grafica de dispersion que grafique el año del modelo vs el precio')
     # crear un gráfico de dispersión
     fig = px.scatter(car_data, x="model_year", y="price")
     fig.show()  # crear gráfico de dispersión
