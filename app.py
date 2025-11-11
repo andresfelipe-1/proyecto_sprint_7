@@ -24,4 +24,5 @@ if model_button:
         'Creacion de una grafica de dispersion que grafique el año del modelo vs el precio')
     # crear un gráfico de dispersión
     fig = px.scatter(car_data, x="model_year", y="price")
-    fig.show()  # crear gráfico de dispersión
+    # crear gráfico de dispersión
+    st.plotly_chart(fig, use_container_width=True)
